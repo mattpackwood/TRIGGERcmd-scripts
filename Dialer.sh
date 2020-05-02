@@ -1,8 +1,7 @@
-for phone_number in /Users/mattpackwood/Documents/GitHub/TRIGGERcmd-scripts/AandA.dat
-
+#!/bin/bash
+while IFS="" read -r p || [ -n "$p" ]
 do
-echo $phone_number
-osascript /Users/mattpackwood/Documents/GitHub/TRIGGERcmd-scripts/sendMessage.applescript $phone_number "Hi there are you around?"
-done
-Dialer.sh (END)
+  printf '%s\n' "$p" 
+osascript /Users/mattpackwood/Documents/GitHub/TRIGGERcmd-scripts/sendMessage.applescript $p "Who were you dropping presents off to?"
+done < /Users/mattpackwood/Documents/GitHub/TRIGGERcmd-scripts/AandA.dat
 
