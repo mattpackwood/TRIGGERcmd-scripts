@@ -4,5 +4,5 @@
 while IFS="" read -r p || [ -n "$p" ]
 do
   printf '%s\n' "$p" 
-osascript /Users/mattpackwood/GitHub/TRIGGERcmd-scripts/sendMessage.applescript $p "Who were you dropping presents off to?"
+osascript /Users/mattpackwood/GitHub/TRIGGERcmd-scripts/sendMessage.applescript $p "Hi guys, just checking in to see how yu are doing?"
 done < /Users/mattpackwood/GitHub/TRIGGERcmd-scripts/AandA.dat
